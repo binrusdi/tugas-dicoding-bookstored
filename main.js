@@ -1,3 +1,4 @@
+
 function saveData(event) {
     event.preventDefault();
     let judul = document.getElementById('judul').value;
@@ -29,4 +30,5 @@ function saveData(event) {
 }
 
 let submit = document.querySelector('input[type="submit"]');
+console.log(submit);
 submit.addEventListener('click', saveData);
