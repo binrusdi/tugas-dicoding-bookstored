@@ -16,11 +16,11 @@ function saveData(event) {
     }
 
     let data = {
-        timestamp: timestamp,
-        judul: judul,
-        penulis: penulis,
-        tahun: tahun,
-        complete: complete
+        id: timestamp,
+        title: judul,
+        author: penulis,
+        year: tahun,
+        isComplete: complete
     };
 
     let jsonData = JSON.stringify(data);
