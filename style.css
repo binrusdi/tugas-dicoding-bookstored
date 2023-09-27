@@ -25,7 +25,7 @@ main .container {
 .container:nth-child(2){
     flex-grow: 2;
 }
-main .container h2 {
+main .container h1 {
     margin: .5rem 0;
     text-align: center;
 }
@@ -50,16 +50,7 @@ label[for="complete"] {
 main form input[type="checkbox"] {
     height: .5rem;
 }
-#allbook {
-    display: flex;
-    row-gap: 10px;
-    flex-direction: column;
-}
-#allbook section {
-    font-size: 1.1rem;
-}
-
-#allbook section h6, p{
+section h6, p{
     color: grey;
 }
 .rak {
@@ -69,13 +60,21 @@ main form input[type="checkbox"] {
     border-radius: 5px;
     margin-top: 2.3rem;
 }
-.span {
+#read-unread {
     padding: 5px;
-    color: yellow;
+    color: white;
     border-radius: 5px;
     text-align: center;
     display: inline-block;
-    background-color: aqua;
+    background-color: greenyellow;
+}
+#delete {
+    border: none;
+    padding: 5px;
+    height: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: red;
 }
 
 

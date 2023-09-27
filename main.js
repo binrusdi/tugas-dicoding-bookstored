@@ -63,11 +63,58 @@ function displayBookShelf() {
 
     // Rak buku sudah dibaca
     bookShelf.read.forEach(book => {
-        const h2 = document.createElement('h2');
-        h2.textContent = "Rak Buku Selesai dibaca";
-        containerRead.appendChild(h2);
+        const h1 = document.createElement('H1');
+        h1.textContent = "Rak Buku Selesai dibaca";
+        containerRead.appendChild(h1);
 
+        const section = document.createElement('SECTION');
+        containerRead.appendChild(section);
+        const h4 = document.createElement('H4');
+        h4.textContent = book.title;
+        section.appendChild(h4);
+        const h6 = document.createElement('H6');
+        h6.textContent = book.author;
+        section.appendChild(h6);
+        const p = document.createElement('P');
+        p.textContent = book.year;
+        section.appendChild(p);
+        const div = document.createElement('div');
+        div.textContent = "selesai dibaca";
+        div.setAttribute('class', 'read')
+        section.appendChild(div);
         
+        const del = document.createElement('button');
+        del.textContent = "Delete";
+        del.setAttribute('class', 'btnDel')
+        containerRead.appendChild(del);
+
+    });
+
+    bookShelf.unread.forEach(book => {
+        const h1 = document.createElement('H1');
+        h1.textContent = "Rak Buku Belum dibaca";
+        containerUnread.appendChild(h1);
+
+        const section = document.createElement('SECTION');
+        containerUnread.appendChild(section);
+        const h4 = document.createElement('H4');
+        h4.textContent = book.title;
+        section.appendChild(h4);
+        const h6 = document.createElement('H6');
+        h6.textContent = book.author;
+        section.appendChild(h6);
+        const p = document.createElement('P');
+        p.textContent = book.year;
+        section.appendChild(p);
+        const div = document.createElement('div');
+        div.textContent = "Belum dibaca";
+        div.setAttribute('class', 'read')
+        section.appendChild(div);
+
+        const del = document.createElement('button');
+        del.textContent = "Delete";
+        del.setAttribute('class', 'btnDel')
+        containerUnread.appendChild(del);
     });
 
 }
