@@ -53,4 +53,22 @@ document.querySelector('form').addEventListener('submit', function (event) {
 });
 
 // Menampilkan data read dan unread
+function displayBookShelf() {
+    const bookShelf = getBookShelf();
+    const containerRead = document.getElementById('read');
+    const containerUnread = document.getElementById('unread');
+    
+    containerRead.innerHTML = "";
+    containerUnread.innerHTML = "";
 
+    // Rak buku sudah dibaca
+    bookShelf.read.forEach(book => {
+        const h2 = document.createElement('h2');
+        h2.textContent = "Rak Buku Selesai dibaca";
+        containerRead.appendChild(h2);
+
+        
+    });
+
+}
+displayBookShelf();
