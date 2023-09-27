@@ -34,6 +34,10 @@ main form {
     display: grid;
     flex-grow: 1;
     font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: .5rem;
 }
 main form input {
     height: 2rem;
@@ -58,6 +62,13 @@ main form input[type="checkbox"] {
 #allbook section h6, p{
     color: grey;
 }
+.rak {
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 2.3rem;
+}
 .span {
     padding: 5px;
     color: yellow;
@@ -65,4 +76,12 @@ main form input[type="checkbox"] {
     text-align: center;
     display: inline-block;
     background-color: aqua;
+}
+
+
+@media screen and (max-width: 780px){
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 }
